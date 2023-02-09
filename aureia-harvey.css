@@ -1,0 +1,37 @@
+body {
+    /* border: 0.5px solid green; */
+    font-family: Verdana, sans-serif;
+    width: 99vw;
+    height: 97vh;
+}
+.img-wrapper {
+    /* border: 0.5px solid red; */
+    position: absolute;
+    left: 400px;
+    top: 100px;
+    overflow: hidden;
+}
+#sculpture-img {
+    /* border: 0.5px solid blue; */
+    width: 700px;
+}
+.inner-response {
+    position: absolute;
+    color: blue;
+    width: 500px;
+    top: 64.3%;
+    left: -41.4%;
+}
+.title {
+    position: absolute;
+    font-size: 2em;
+    width: 400px;
+    left: 950px;
+}
+.response {
+    position: absolute;
+    z-index: -1;
+    width: 500px;
+    left: 110px;
+    top: 400px;
+}

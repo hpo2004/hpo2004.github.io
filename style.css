@@ -1,0 +1,29 @@
+body {
+    /* border: 0.5px solid green; */
+    font-family: Verdana, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main {
+    /* border: 0.5px solid red; */
+    /* display: grid;
+    grid-template-columns: auto auto;
+    height: 350px;
+    width: 350px; */
+    /* animation: grow 2s ease-in; */
+}
+.entry {
+    /* border: none; */
+    width: 200px;
+    height: 300px;
+    transition: all 1s ease;
+}
+/* .entry:hover {
+    width: 100vw;
+    height: 100vh;
+} */
