@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+main {
+    /* border: 0.5px solid green; */
+    width: 900px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+#menu {
+    border: 1px solid black;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+}
+#viewport {
+    /* border: 0.5px solid blue; */
+    width: 600px;
+    height: 100%;
+    z-index: 0;
+}
+#viewport > img {
+    position: absolute;
+    object-fit: cover;
+    width: 800px;
+    height: 600px;
+}
+#image-0 {
+
+}
+#image-1 {
+    visibility: hidden;
+}
+#image-2 {
+    visibility: hidden;
+}

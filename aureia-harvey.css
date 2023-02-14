@@ -3,17 +3,40 @@ body {
     font-family: Verdana, sans-serif;
     width: 99vw;
     height: 97vh;
+    animation: fadeIn ease 500ms;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
 }
 .img-wrapper {
     /* border: 0.5px solid red; */
     position: absolute;
     left: 400px;
-    top: 100px;
+    top: 110px;
     overflow: hidden;
 }
 #sculpture-img {
     /* border: 0.5px solid blue; */
     width: 700px;
+}
+.title {
+    position: absolute;
+    font-size: 2em;
+    width: 400px;
+    left: 950px;
+    top: 15px;
+}
+.response {
+    position: absolute;
+    z-index: -1;
+    width: 500px;
+    left: 110px;
+    top: 410px;
 }
 .inner-response {
     position: absolute;
@@ -21,17 +44,4 @@ body {
     width: 500px;
     top: 64.3%;
     left: -41.4%;
-}
-.title {
-    position: absolute;
-    font-size: 2em;
-    width: 400px;
-    left: 950px;
-}
-.response {
-    position: absolute;
-    z-index: -1;
-    width: 500px;
-    left: 110px;
-    top: 400px;
 }

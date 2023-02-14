@@ -3,20 +3,15 @@
         <title>Web Dev</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
     </head>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            var frame = document.getElementById("entry-0");
-            frame.contentWindow.scrollTo(500, 500);
-        });
-    </script>
     <body>
         <main>
-            <iframe
-                id="entry-0"
-                class="entry"
-                src="../hpo2004.github.io/aureia-harvey.html"
-            ></iframe>
+            <div id="entries">
+                <a class="entry" href="aureia-harvey.html" onclick="fadeOut(event)"><img class="image" src="https://uploads-ssl.webflow.com/61e6c06a23cb13bf76051194/62b5f93c1a942265638c8bdc_motherchild-2%20(1).jpg"></a>
+                <a class="entry" href="vann-bush.html" onclick="fadeOut(event)"><img class="image" src="https://content.time.com/time/magazine/archive/covers/1944/1101440403_400.jpg"></a>
+                <a class="entry" href="john-berger.html" onclick="fadeOut(event)"><img class="image" src="https://artforum.com/uploads/upload.002/id01129/article_1064x.jpg"></a>
+            </div>
         </main>
     </body>
 </html>
