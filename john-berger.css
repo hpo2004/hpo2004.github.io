@@ -1,6 +1,15 @@
 body {
     display: flex;
     justify-content: center;
+    animation: fadeIn ease 500ms;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
 }
 main {
     /* border: 0.5px solid green; */
