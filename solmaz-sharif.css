@@ -10,6 +10,15 @@ body {
     justify-content: center;
     scrollbar-width: none;
     font-family: 'PT Serif', serif;
+    animation: fadeIn ease 500ms;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
 }
 body::-webkit-scrollbar { 
     display: none;
