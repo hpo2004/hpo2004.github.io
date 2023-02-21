@@ -57,3 +57,6 @@ body.fade-out {
 .entry:nth-child(4) {
     animation: fadeIn 2000ms ease;
 }
+.entry:nth-child(5) {
+    animation: fadeIn 2500ms ease;
+}
