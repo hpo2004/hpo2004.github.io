@@ -36,7 +36,12 @@ const fillFlexbox = (mainDiv) => {
    for (let i = 0; i < lines.length; i++) {
        let newItem = document.createElement("div");
        let itemText = document.createTextNode(lines[i]);
+       const rgbValues = getRandomColor();
        newItem.appendChild(itemText);
+       newItem.style.color = "rgb(" + 
+                             String(rgbValues[0]) + ", " + 
+                             String(rgbValues[1]) + ", " +
+                             String(rgbValues[2]) + ") ";
        mainDiv.appendChild(newItem);
    }
 }
@@ -58,4 +63,12 @@ const shuffle = (array) => {
    }
  
    return array;
+}
+
+const getRandomColor = () => {
+    const rbg = []
+    for (let i = 0; i < 3; i++) {
+        rbg.push(Math.floor(Math.random() * 256));
+    }
+    return rbg;
 }

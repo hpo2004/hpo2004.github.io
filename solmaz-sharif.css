@@ -38,3 +38,13 @@ main > div {
 #menu {
     margin-bottom: 15px;
 }
+.btn {
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    padding: 15px;
+}
+.btn:hover {
+    background-color: rgb(227, 227, 227);
+}
