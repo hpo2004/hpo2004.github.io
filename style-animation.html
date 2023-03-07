@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <title>Web Dev</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin: 0;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+            .ball {
+                position: relative;
+                background-color: orangered;
+                border-radius: 50%;
+                width: 20vh;
+                aspect-ratio: 1 / 1;
+                top: 20vh;
+                animation: 600ms ease-in 100ms infinite alternate bounce;
+            }
+            @keyframes bounce {
+                from {
+                    transform: translateY(20vh);
+                }
+                to {
+                    transform: translateY(60vh);
+                }
+            }
+            @keyframes moveForward {
+                from {
+                    transform: translateX(0vw);
+                }
+                to {
+                    transform: translateX(90vw);
+                }
+            }
+
+
+            #person {
+                position: relative;
+                border: 1px solid red;
+                height: 300px;
+                width: 200px;
+                top: 200px;
+                left: 600px;
+            }
+            #person > div {
+                position: absolute;
+            }
+            #head {
+                border: 1px solid black;
+                height: 50px;
+                width: 50px;
+                border-radius: 25px;
+                top: 30px;
+                left: 75px;
+                animation: 350ms linear 100ms infinite alternate headBounce;
+            }
+            @keyframes headBounce {
+                from {
+                    top: 30px;
+                }
+                to {
+                    top: 25px;
+                }
+            }
+            #torso {
+                border: 1px solid black;
+                height: 125px;
+                width: 70px;
+                border-radius: 35px;
+                top: 75px;
+                left: 65px;
+                animation: 350ms linear 100ms infinite alternate torsoBounce;
+            }
+            @keyframes torsoBounce {
+                from {
+                    top: 75px;
+                }
+                to {
+                    top: 70px;
+                }
+            }
+            #left-arm {
+                border: 1px solid red;
+                height: 120px;
+                width: 30px;
+                border-radius: 15px;
+                top: 100px;
+                left: 85px;
+                transform-origin: top;
+                animation: 700ms linear 100ms infinite alternate leftArmSwing;
+            }
+            @keyframes leftArmSwing {
+                from {
+                    transform: rotate(-30deg);
+                }
+                to {
+                    transform: rotate(30deg);
+                }
+            }
+            #right-arm {
+                border: 1px solid blue;
+                height: 120px;
+                width: 30px;
+                border-radius: 15px;
+                top: 100px;
+                left: 85px;
+                transform-origin: top;
+                animation: 700ms linear 100ms infinite alternate rightArmSwing;
+            }
+            @keyframes rightArmSwing {
+                from {
+                    transform: rotate(30deg);
+                }
+                to {
+                    transform: rotate(-30deg);
+                }
+            }
+            #left-thigh {
+                border: 1px solid red;
+                height: 50px;
+                width: 35px;
+                border-radius: 15px;
+                top: 180px;
+                left: 82px;
+                transform-origin: top;
+                animation: 700ms linear 100ms infinite alternate leftThighSwing;
+            }
+            @keyframes leftThighSwing {
+                from {
+                    transform: rotate(-20deg);
+                }
+                to {
+                    transform: rotate(20deg);
+                }
+            }
+            #right-thigh {
+                border: 1px solid blue;
+                height: 50px;
+                width: 35px;
+                border-radius: 15px;
+                top: 180px;
+                left: 82px;
+                transform-origin: top;
+                animation: 700ms linear 100ms infinite alternate rightThighSwing;
+            }
+            @keyframes rightThighSwing {
+                from {
+                    transform: rotate(20deg);
+                }
+                to {
+                    transform: rotate(-20deg);
+                }
+            }
+            #left-calf {
+                border: 1px solid red;
+                height: 60px;
+                width: 30px;
+                border-radius: 15px;
+                top: 220px;
+                left: 85px;
+                transform-origin: top;
+                animation: 700ms linear 100ms infinite alternate leftCalfMove;
+            }
+            @keyframes leftCalfMove {
+                to {
+                    transform: translateX(-10px) rotate(20deg);
+                }
+                from {
+                    transform: translateX(10px) rotate(-30deg);
+                }
+            }
+            #right-calf {
+                border: 1px solid blue;
+                height: 60px;
+                width: 30px;
+                border-radius: 15px;
+                top: 220px;
+                left: 85px;
+                transform-origin: top;
+                animation: 700ms linear 100ms infinite alternate rightCalfMove;
+            }
+            @keyframes rightCalfMove {
+                to {
+                    transform: translateX(10px) rotate(-30deg);
+                }
+                from {
+                    transform: translateX(-10px) rotate(20deg);
+                }
+            }
+            #left-foot {
+                border: 1px solid red;
+                height: 20px;
+                width: 50px;
+                border-radius: 15px;
+                top: 280px;
+                left: 70px;
+                transform-origin: top;
+                animation: 700ms linear 100ms infinite alternate leftFootMove;
+            }
+            @keyframes leftFootMove {
+                to {
+                    transform: translateX(-25px) rotate(15deg);
+                }
+                from {
+                    transform: translateX(25px) rotate(-15deg);
+                }
+            }
+            #right-foot {
+                border: 1px solid blue;
+                height: 20px;
+                width: 50px;
+                border-radius: 15px;
+                top: 280px;
+                left: 70px;
+                transform-origin: top;
+                animation: 700ms linear 100ms infinite alternate rightFootMove;
+            }
+            @keyframes rightFootMove {
+                to {
+                    transform: translateX(25px) rotate(-15deg);
+                }
+                from {
+                    transform: translateX(-25px) rotate(15deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main id="main">
+            <div class="ball"></div>
+            <div id="person">
+                <div id="head"></div>
+                <div id="torso"></div>
+                <div id="left-arm"></div>
+                <div id="right-arm"></div>
+                <div id="left-hand"></div>
+                <div id="right-hand"></div>
+                <div id="left-thigh"></div>
+                <div id="right-thigh"></div>
+                <div id="left-calf"></div>
+                <div id="right-calf"></div>
+                <div id="left-foot"></div>
+                <div id="right-foot"></div>
+            </div>
+        </main>
+    </body>
+</html>
