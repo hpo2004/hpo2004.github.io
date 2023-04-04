@@ -60,3 +60,6 @@ body.fade-out {
 .entry:nth-child(5) {
     animation: fadeIn 1900ms ease;
 }
+.entry:nth-child(6) {
+    animation: fadeIn 2200ms ease;
+}
