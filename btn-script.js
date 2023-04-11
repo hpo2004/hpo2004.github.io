@@ -15,7 +15,7 @@ btn.addEventListener("click", () => {
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
         const randomX = Math.floor(Math.random() * (windowWidth - 25));
-        const randomY = Math.floor(Math.random() * windowHeight);
+        const randomY = Math.floor(Math.random() * windowHeight - 100);
         btn.style.left = `${randomX}px`;
         btn.style.top = `${randomY}px`;
         console.log(randomX, randomY);
