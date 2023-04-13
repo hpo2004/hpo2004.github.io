@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Medium is the Massage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        #author {
+            font-size: 2em;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            color:crimson;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #222;
+                color:aliceblue;
+            }
+        }
+    </style>
+    <script defer>
+        window.addEventListener('load', () => {
+            const quote = "....compartmentalization of occupations and interests bring about a separation of that mode of activity commonly called 'practice' from insight, of imagination from executive 'doing.' Each of these activities is then assigned its own place in which it must abide. Those who write the anatomy of experience then suppose that these divisions inhere in the very constitution of human nature."
+            const container = document.getElementById("quote-container");
+            const words = quote.split(" ");
+
+            const fonts = [
+                "Arial, sans-serif",
+                "Helvetica, sans-serif",
+                "Tahoma, sans-serif",
+                "Verdana, sans-serif",
+                "Georgia, serif",
+                "Times New Roman, serif",
+                "Courier New, monospace",
+                "Lucida Console, monospace",
+                "Tahoma, sans-serif",
+                "Verdana, sans-serif",
+                "Georgia, serif",
+                "Times New Roman, serif",
+                "Courier New, monospace",
+                "Lucida Console, monospace",
+            ];
+
+            words.forEach((word, index) => {
+                const wordDiv = document.createElement("div");
+
+                wordDiv.textContent = word;
+                // random 16 - 48
+                wordDiv.style.fontSize = Math.floor(Math.random() * 32 + 16) + "px";
+                wordDiv.style.fontWeight = Math.floor(Math.random() * 100 + 500);
+                wordDiv.style.fontStyle = Math.random() < 0.5 ? "italic" : "normal";
+                wordDiv.style.fontFamily = fonts[Math.floor(Math.random() * fonts.length)];
+                wordDiv.style.float = Math.random() < 0.7 ? "left" : "";
+
+                container.appendChild(wordDiv);
+                const spaceDiv = document.createElement("div");
+
+                const numSpaces = Math.floor(Math.random() * 10) + 1;
+                spaceDiv.textContent = " ".repeat(numSpaces);
+
+                container.appendChild(spaceDiv);
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id='quote-container'></div>
+    <br><br><p id='author'>- John Dewey</p><br>
+</body>
+</html>

@@ -7,11 +7,11 @@ document.addEventListener('mousemove', (e) => {
 });
 
 btn.addEventListener("click", () => {
-    // btn.style.animationName = 'move';
-    // btn.style.animationDuration = '2s';
-    // btn.style.animationFillMode = 'forwards';
+    btn.style.animationName = 'move';
+    btn.style.animationDuration = '2s';
+    btn.style.animationFillMode = 'forwards';
   
-    // setTimeout(() => {
+    setTimeout(() => {
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
         const randomX = Math.floor(Math.random() * (windowWidth - 25));
@@ -19,5 +19,5 @@ btn.addEventListener("click", () => {
         btn.style.left = `${randomX}px`;
         btn.style.top = `${randomY}px`;
         console.log(randomX, randomY);
-    // }, 2000);
+    }, 2000);
 });
